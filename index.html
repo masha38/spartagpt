@@ -22,9 +22,15 @@
       transition: transform 0.3s ease; /* 변화가 일어날 때 0.3초간 부드럽게 변화하도록 설정 */
     }
 
-    form {
+    .containform{
+      padding: 30px;
     width: 50%;
     margin: 0 auto;
+  }
+
+  button{
+    margin-top: 10px;
+ 
   }
     
     </style>
@@ -122,17 +128,24 @@
 
     </div>
 
-    <div class="input">
-      <form action="mailto:sajary@naver.com" method="post" enctype="text/plain">
-        <label for="name">이름:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">이메일:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">문의 내용:</label><br>
-        <textarea id="message" name="message" rows="10" cols="30"></textarea><br><br>
-        <input type="submit" value="문의 보내기">
+    <div class="containform">
+      <form>
+        <div class="form-group">
+          <label for="name">이름</label>
+          <input type="text" class="form-control" id="name" placeholder="이름을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="message">메시지</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="메시지를 입력하세요"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">전송</button>
       </form>
     </div>
+    
 
   </div>
 </div>
